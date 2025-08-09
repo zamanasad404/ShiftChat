@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShiftStrong — Dashboard</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-128.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body onload="renderDashboard()">
+
+  <div class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="logo"></span> ShiftStrong</a>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a href="pricing.html" class="btn">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="onboard.html" class="btn">Sign in / Join</a>
+      </div>
+    </div>
+  </div>
+  <div class="topbar-gap"></div>
+
+  <div class="container section">
+    <div class="card">
+      <h2>Welcome back, <span data-name>Friend</span> 👋</h2>
+      <p class="small">Your role: <strong data-role>healthcare pro</strong>. Keep your streak alive — tiny wins compound.</p>
+      <div class="feature" style="margin-top:10px">
+        <h3>Your message for now</h3>
+        <p data-message>Loading…</p>
+      </div>
+      <div class="grid-2" style="margin-top:10px">
+        <div class="feature">
+          <h3>Quick actions</h3>
+          <ul>
+            <li>Start a 60-second shoulder release</li>
+            <li>Do a 3-cycle breathing reset</li>
+            <li>Drink a full glass of water</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <h3>Keep your streak</h3>
+          <p class="small">Open the app 3× today (morning, mid-shift, wind-down) to earn your daily badge.</p>
+          <a class="btn btn-primary" href="pricing.html">Unlock Premium</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>© <span id="year"></span> ShiftStrong. All rights reserved.</div>
+      <div style="display:flex; gap:14px;">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join ShiftStrong — Onboarding</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-128.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="logo"></span> ShiftStrong</a>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a href="pricing.html" class="btn">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="onboard.html" class="btn">Sign in / Join</a>
+      </div>
+    </div>
+  </div>
+  <div class="topbar-gap"></div>
+
+  <div class="container section">
+    <div class="card">
+      <h2>Tell us a little about you</h2>
+      <p class="small">We use this to personalise your daily boosts. You can change it anytime. We never share or sell your data.</p>
+      <form onsubmit="return saveProfile(this)">
+        <label>First name
+          <input name="firstName" required placeholder="e.g., Aisha" />
+        </label>
+        <label>Your role
+          <select name="role">
+            <option value="nurse">Nurse</option>
+            <option value="doctor">Doctor</option>
+            <option value="paramedic">Paramedic</option>
+            <option value="therapist">Therapist</option>
+            <option value="healthcare assistant">Healthcare Assistant</option>
+            <option value="admin">Admin/Coordinator</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>Shift pattern
+          <select name="shift">
+            <option value="days">Days</option>
+            <option value="nights">Nights</option>
+            <option value="rotating">Rotating</option>
+            <option value="variable">Variable</option>
+          </select>
+        </label>
+        <label>Coaching style
+          <select name="tone">
+            <option value="gentle">Gentle</option>
+            <option value="energising">Energising</option>
+            <option value="tough">Tough love</option>
+          </select>
+        </label>
+        <label>Top 2 challenges
+          <input name="challenge1" placeholder="e.g., sleep after nights" />
+          <input name="challenge2" placeholder="e.g., mid-shift energy dips" style="margin-top:8px" />
+        </label>
+        <div class="notice small">By continuing, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy</a>. This is wellbeing content, not medical advice.</div>
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn btn-primary" type="submit">Create my plan</button>
+          <a class="btn btn-ghost" href="index.html">Back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>© <span id="year"></span> ShiftStrong. All rights reserved.</div>
+      <div style="display:flex; gap:14px;">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

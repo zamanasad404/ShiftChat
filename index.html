@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShiftStrong — Daily Energy & Resilience for Shift Workers</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-128.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="theme-color" content="#5E3B76" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="logo"></span> ShiftStrong</a>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a href="pricing.html" class="btn">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="onboard.html" class="btn">Sign in / Join</a>
+      </div>
+    </div>
+  </div>
+  <div class="topbar-gap"></div>
+
+  <div class="container hero">
+    <div class="card">
+      <div class="grid-2">
+        <div>
+          <h1>Daily micro-coaching for healthcare & shift workers.</h1>
+          <p class="lead">Feel calmer, steadier, and more energised — in 90 seconds a day. Crafted for people who keep the world running.</p>
+          <div class="badges">
+            <span class="badge">Wellbeing only (not medical advice)</span>
+            <span class="badge">Mobile-first PWA</span>
+            <span class="badge">Cancel anytime</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="onboard.html">Start free trial</a>
+            <a class="btn btn-ghost" href="pricing.html">See pricing</a>
+            <button class="btn btn-ghost" data-install style="display:none" onclick="installPWA()">Install app</button>
+          </div>
+        </div>
+        <div>
+          <div class="feature">
+            <h3>What you’ll get</h3>
+            <p>Three touchpoints a day: a morning boost, mid-shift reset, and post-shift wind-down. Tiny actions that fit into real life — not another task list.</p>
+          </div>
+          <div class="feature" style="margin-top:12px">
+            <h3>Designed around your shift</h3>
+            <p>Tell us your role, shift pattern, and tone you prefer (gentle / energising / tough love). We tailor messages to feel like they’re written for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2>Why ShiftStrong works</h2>
+    <div class="card-list">
+      <div class="card">
+        <h3>Personal, not generic</h3>
+        <p class="small">Specific to healthcare and shift-life. No “live laugh love.” Just what helps at 3 a.m. when the bleep goes off again.</p>
+      </div>
+      <div class="card">
+        <h3>Built for tiny wins</h3>
+        <p class="small">Small, repeatable actions that compound: breathing resets, micro-breaks, quick shoulder releases, sleep hygiene for rotations.</p>
+      </div>
+      <div class="card">
+        <h3>Consistency without willpower</h3>
+        <p class="small">Streaks, badges, and gentle nudges keep momentum — motivation comes and goes, systems stick.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>© <span id="year"></span> ShiftStrong. All rights reserved.</div>
+      <div style="display:flex; gap:14px;">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
